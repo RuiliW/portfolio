@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ruili Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruili Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>My Portfolio</h1>
-  </header>
 
-  <main>
-    <div class="projects-grid">
-      <div class="project-card">
-        <a href="project1.html">
-          <img src="images/project1-1.jpg" alt="Project 1">
-          <h2>Project 1</h2>
-        </a>
-      </div>
-      <div class="project-card">
-        <a href="project2.html">
-          <img src="images/project2-1.jpg" alt="Project 2">
-          <h2>Project 2</h2>
-        </a>
-      </div>
-      <!-- 可以继续添加更多项目 -->
+<div class="project-grid">
+  <a href="project1.html" class="project-item" data-index="0">
+    <img src="images/project1.jpg" alt="Project 1">
+    <div class="details">
+      <h2 class="title">Project 1</h2>
+      <p class="fields">Multifamily - Interior Focus</p>
     </div>
-  </main>
+  </a>
+
+  <a href="project2.html" class="project-item" data-index="1">
+    <img src="images/project2.jpg" alt="Project 2">
+    <div class="details">
+      <h2 class="title">Project 2</h2>
+      <p class="fields">Single Family</p>
+    </div>
+  </a>
+
+  <!-- 更多项目复制上面结构 -->
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox-wrap" class="hidden">
+  <div id="lightbox-blocking"></div>
+  <div id="lightbox-inner-wrap">
+    <span class="close">&times;</span>
+    <span class="prev">&#10094;</span>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+    </div>
+    <span class="next">&#10095;</span>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
